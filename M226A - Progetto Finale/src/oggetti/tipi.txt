@@ -1,0 +1,19 @@
+Tipo Normale = new Tipo("Normale");
+Tipo Fuoco = new Tipo("Fuoco");
+Tipo Acqua = new Tipo("Acqua");
+Tipo Erba = new Tipo("Erba");
+Tipo Elettro = new Tipo("Elettro");
+Tipo Ghiaccio = new Tipo("Ghiaccio");
+Tipo Lotta = new Tipo("Lotta");
+Tipo Veleno = new Tipo("Veleno");
+Tipo Terra = new Tipo("Terra");
+Tipo Volante = new Tipo("Volante");
+Tipo Psico = new Tipo("Psico");
+Tipo Coleottero = new Tipo("Coleottero");
+Tipo Roccia = new Tipo("Roccia");
+Tipo Spettro = new Tipo("Spettro");
+Tipo Drago = new Tipo("Drago");
+Tipo Buio = new Tipo("Buio");
+Tipo Acciaio = new Tipo("Acciaio");
+Tipo Folletto = new Tipo("Folletto");
+

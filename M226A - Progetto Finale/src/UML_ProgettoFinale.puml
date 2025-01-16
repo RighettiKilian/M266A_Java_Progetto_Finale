@@ -1,0 +1,152 @@
+
+@startuml
+skinparam classAttributeIconSize 0
+
+class Pokemon {
+-nome: string
+-soprannome: String
+-numeroPokedex: int
+-statistiche[]: int
+-livello: int
+-identificatore: String
+
+-abilita: Abilita
+-tipo1: Tipo
+-tipo2: Tipo
+-strumento: Strumento
+-natura: Natura
+-mosse[]: Mossa
+-box: Box
+-static registroPokedex : HashMap<Integer, String>
+-mossePresenti: int
+
++Pokemon(String nome, int livello, int[] statistiche,
+int numeroPokedex, String soprannome)
++controllaNome(): boolean
++cercaAbilita(String nome): Abilita
++getNome(): string
++getIdentificatore(): string
++getSoprannome(): string
++setSoprannome(string): void
++getNumeroPokedex(): int
++getPosizione(): Box
++getStatistiche(): int[]
++getLivello(): int
++aumentaLivello(int aumento): String
+
++setPosizione(string)
++setStrumento(strumento)
++setAbilità(abilità)
++setNatura(natura)
+
++aggiungiTipo(Tipo tipoPrimario, Tipo tipoSecondario): void
++getTipi(): String
++aggiungiAbilita(Abilita abilita): void
++getAbilita(): string
++aggiungiStrumento(Strumento strumento): void
++getStrumento(): string
++aggiungiNatura(Natura natura): void
++getNatura(): string
++aggiungiMossa(Mossa mossa): void
++getMosse(): string
++aggiungiBox(Box box): void
++getBox(): string
+
+-contaMosse(): int
+-controllaMosse(Mossa mossa): boolean
+}
+
+class Strumento {
+-nome: string
+-descrizione: string
+-nomiStrumenti: Set<String>
++listaStrumenti: List<Strumento>
+
++Strumento()
++Strumento(String nome, String descrizione)
++cercaStrumento(String nomeStrumento): Strumento
++controllaNome(): boolean
++getNome(): string
++getDescrizione(): string
+}
+
+class Abilità {
+-nome: string
+-effetto: string
+-nomiAbilita: List<Abilita>
+-listaAbilita: List<Abilita>
+
++Abilita()
++Abilita(String nome, String effetto)
++controllaNome(): boolean
++cercaAbilita(String nomeAbilita): Abilita
++getNome(): string
++getEffetto(): string
++setEffetto(string): void
+}
+
+class Box {
+-nome: int
+-pokemons : ArrayList<Pokemon>
+
++Box(String nome, ArrayList<Pokemon> pokemons)
++getNumero(): int
++setNome(String nome): void
++aggiungiPokemon(Pokemon pokemon): void
++rimuoviPokemon(Pokemon pokemon): void
++getPokemons(): String
+}
+
+class Natura {
+-nome: string
+-aumentoStatistiche[]: int
+-nomiNature: Set<String>
+
++Natura()
++Natura(String nome, int[] aumentoStatistiche)
++controllaNome(): boolean
++getNome(): string
++getAumentoStatitiche(): int[]
+}
+
+class Tipo {
+-nome: string
+
++Tipo(String nome)
++getNome(): string
++toString(): void
+}
+
+class Mossa {
+-nome: string
+-potenza: int
+-PP: int
+-precisione: int
+-tipo: Tipo
+-nomiMosse: Set<String>
+
++Mossa(String nome, int potenza, int PP,
+int precisione, Tipo tipo)
++controllaNome(): boolean
++getNome(): string
++getPotenza(): int
++getPP(): int
++getPrecisione(): int
++getTipo(): Tipo
++setPotenza(int)
++setPP(int)
++setPrecisione(int)
++setTipo(Tipo)
+}
+
+Pokemon " 1 " o-- " *" Abilità
+Pokemon " 1 " o-- " * " Natura
+Pokemon " 1 " o-- " * " Strumento
+
+Pokemon " 1 " o-- " * " Box
+Pokemon " 1,2 " --- " * " Tipo
+Pokemon " 4 " o-- " * " Mossa
+Mossa " 1 " o-left- "*" Tipo
+
+left to right direction
+@enduml
