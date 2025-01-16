@@ -374,11 +374,6 @@ public class Program {
             }
         }
     }
-
-    // Commit + Push per gitHub desktop
-    // >> Aggiungere il percorso per il Git nell'SSD
-
-
     // DOCUMENTAZIONI:
     // LEFT TO RIGHT NEL PLANT UML: https://plantuml.com/use-case-diagram#:~:text=actor2%3A%20%2D%2D%3E%20(Usecase2)%0A%40enduml-,Left%20to%20right%20direction,-The%20general%20default
     // new int[] come parametro: https://sentry.io/answers/java-initialize-array/?utm_source=chatgpt.com#initialize-an-array-using-known-element-values:~:text=Initialize%20an%20array%20using%20known%20element%20values
